@@ -21,10 +21,20 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.saro3.quizApp",
+      "usesCleartextTraffic": true
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b310abea-c8c0-4cd7-a075-9ea8cee5d1cc"
+      }
+    },
+    "plugins": [
+      "expo-build-properties"
+    ]
   }
 }
