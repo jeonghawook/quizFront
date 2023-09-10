@@ -24,9 +24,11 @@ const Level = ({ navigation, route }) => {
 
   return (
     <EnteringContainer>
-      <EnteringButton onPress={()=>handleCreateQuizPress()}>
-<ExtraText>flashCard 만들기</ExtraText>
-      </EnteringButton>
+       {category === "personnel" && (
+        <EnteringButton onPress={() => handleCreateQuizPress()}>
+          <ExtraText>my카드 만들기</ExtraText>
+        </EnteringButton>
+      )}
       <Subtitle>레벨을 선택해주세요</Subtitle>
       <EnteringButton
         style={styles.levelButton}

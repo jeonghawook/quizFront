@@ -7,8 +7,7 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 import CardBack from "./cardBack";
-import CardFront from "./cardFront"; // Make sure the import path is correct
-import {  StyledContainer, Colors, InnerContainer, PageTitle, Subtitle, StyledButton, ButtonText, TextLink, TextLinkConetent } from "./../components/styles";
+import CardFront from "./cardFront"; 
 
 const { width, height } = Dimensions.get("window");
 const CardItem = ({ question, answer, isFront }) => {

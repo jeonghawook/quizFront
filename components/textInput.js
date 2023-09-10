@@ -6,7 +6,7 @@ const MyTextInput = ({ label, icon, ...props }) => {
   return (
     <View>
       <StyledInputLabel>{label}</StyledInputLabel>
-      {label === "내용" ? <StyledQuestionInput {...props}/>
+      {label === "내용" ? <StyledQuestionInput multiline={true} textAlignVertical="top" {...props}/>
       :  <StyledTextInput {...props} />}
      
     </View>

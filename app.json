@@ -2,7 +2,7 @@
   "expo": {
     "name": "quizApp",
     "slug": "quizApp",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -23,7 +23,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.saro3.quizApp",
-      "usesCleartextTraffic": true
+      "versionCode":2
     },
     "web": {
       "favicon": "./assets/favicon.png"

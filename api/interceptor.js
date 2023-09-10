@@ -61,15 +61,17 @@ instance.interceptors.request.use(async (config) => {
 
       config.headers.Authorization = `Bearer ${newAccessToken}`;
 
+
       return config;
     } catch (error) {
-     
-      if(error.response.data.statusCode === 401){
-      
-       await AsyncStorage.getItem("refreshToken")
+     console.log(error.response.data)
+      if(error.response.data.code === "333"){  //나중에 벡에서 333 으로 바꾸기
+      console.log("check0")
+       await AsyncStorage.removeItem("refreshToken")
        await AsyncStorage.removeItem("accessToken")
         
       }
+      
 
  
       console.log("check")
