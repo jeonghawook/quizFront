@@ -8,6 +8,7 @@ import Menu from "../screens/Menu";
 import Level from "../screens/Level";
 import Quiz from "../screens/Quiz";
 import CreateQuiz from "../screens/CreateQuiz";
+import KakaoLogin from "../screens/KakaoLogin";
 
 const Stack = createNativeStackNavigator();
 
@@ -33,6 +34,8 @@ const RootStack = ({isActive}) => {
         <Stack.Screen name="Level" component={Level} />
         <Stack.Screen name="Quiz" component={Quiz} />
         <Stack.Screen name="CreateQuiz" component={CreateQuiz}/>
+        <Stack.Screen name="KakaoLogin" component={KakaoLogin}/>
+        
       </Stack.Navigator>
     </NavigationContainer>
   );

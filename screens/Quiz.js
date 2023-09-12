@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { FlatList, View, Text, Dimensions } from "react-native";
 import instance from "../api/interceptor";
 import CardItem from "../components/cardItem";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import useAuthStore from "../api/store";
 import { StyledContainer, PageTitle } from "../components/styles";
 

@@ -17,6 +17,7 @@ import MyTextInput from "../components/textInput";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import useAuthStore from "../api/store";
 import jwt_decode from "jwt-decode";
+import { TouchableOpacity , Text} from "react-native";
 
 const Login = ({ navigation }) => {
   const { login } = useAuthStore();
@@ -46,19 +47,18 @@ const Login = ({ navigation }) => {
   const handleSocialLogin = async () => {
     try {
       const response = await axios.get("https://pocom.shop/users/kakao");
-      console.log(response)
+      console.log(response);
       await AsyncStorage.setItem("accessToken", response.data.accessToken);
       await AsyncStorage.setItem("refreshToken", response.data.refreshToken);
       const decodedToken = jwt_decode(response.data.accessToken);
 
       const { isActive, nickname, userId, rank } = decodedToken;
-  
+
       await login(isActive, nickname, userId, rank);
       navigation.navigate("Menu");
     } catch (error) {
       console.log(error);
     }
-
   };
 
   return (
@@ -101,9 +101,15 @@ const Login = ({ navigation }) => {
                   </TextLink>
                 </ButtonText>
               </StyledButton>
-              {/* <StyledButton onPress={handleSocialLogin}>
-                <ButtonText>카카오로그인</ButtonText>
-              </StyledButton> */}
+              <StyledButton>
+                <TouchableOpacity
+                  onPress={() =>
+                    navigation.navigate("KakaoLogin")
+                  }
+                >
+                  <Text>카카오 화면으로</Text>
+                </TouchableOpacity>
+              </StyledButton>
             </View>
           )}
         </Formik>
