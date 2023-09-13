@@ -101,7 +101,7 @@ const Login = ({ navigation }) => {
                   </TextLink>
                 </ButtonText>
               </StyledButton>
-              <StyledButton>
+              {/* <StyledButton>
                 <TouchableOpacity
                   onPress={() =>
                     navigation.navigate("KakaoLogin")
@@ -109,7 +109,7 @@ const Login = ({ navigation }) => {
                 >
                   <Text>카카오 화면으로</Text>
                 </TouchableOpacity>
-              </StyledButton>
+              </StyledButton> */}
             </View>
           )}
         </Formik>
