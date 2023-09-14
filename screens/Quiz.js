@@ -11,6 +11,7 @@ const Card = ({ navigation, route }) => {
   const { category, level } = route.params;
   const [questions, setQuestions] = useState([]);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(true); // Loading state
   const prevCardIndexRef = useRef(currentCardIndex);
   const { logout } = useAuthStore();
 
@@ -22,6 +23,7 @@ const Card = ({ navigation, route }) => {
     try {
       const response = await instance.get(`/quiz/${category}/${level}`);
       setQuestions(response.data);
+      setIsLoading(false); // Set loading state to false when data is fetched
     } catch (error) {
       console.log(error);
       await logout();
@@ -51,6 +53,15 @@ const Card = ({ navigation, route }) => {
       prevCardIndexRef.current = newIndex;
     }
   };
+
+  // Render loading indicator while fetching data
+  if (isLoading) {
+    return (
+      <StyledContainer>
+        <PageTitle>Loading...</PageTitle>
+      </StyledContainer>
+    );
+  }
 
   return (
     <>
