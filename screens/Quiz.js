@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FlatList, View, Text, Dimensions } from "react-native";
+import { FlatList, View, Text, Dimensions, TouchableOpacity } from "react-native";
 import instance from "../api/interceptor";
 import CardItem from "../components/cardItem";
 import useAuthStore from "../api/store";
-import { StyledContainer, PageTitle } from "../components/styles";
+import { StyledContainer, PageTitle, StyledButton, ExtraText, EnteringButton } from "../components/styles";
 
 const { width } = Dimensions.get("window");
 
@@ -54,6 +54,7 @@ const Card = ({ navigation, route }) => {
     }
   };
 
+
   // Render loading indicator while fetching data
   if (isLoading) {
     return (
@@ -62,6 +63,7 @@ const Card = ({ navigation, route }) => {
       </StyledContainer>
     );
   }
+  console.log(questions)
 
   return (
     <>
@@ -70,6 +72,10 @@ const Card = ({ navigation, route }) => {
           <PageTitle>no Cards</PageTitle>
         </StyledContainer>
       ) : (
+        <StyledContainer>
+         <EnteringButton onPress={()=>{navigation.navigate('QuizList',{category, level})}}>
+          <ExtraText>List</ExtraText>
+          </EnteringButton>
         <FlatList
           data={questions}
           keyExtractor={(item) => item._id}
@@ -79,6 +85,7 @@ const Card = ({ navigation, route }) => {
           showsHorizontalScrollIndicator={false}
           onMomentumScrollEnd={handleMomentumScrollEnd}
         />
+      </StyledContainer>
       )}
     </>
   );
