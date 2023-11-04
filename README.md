@@ -44,6 +44,9 @@
 </table>
 
 ## **중요화면**
+<img src="https://github.com/jeonghawook/quizFront/assets/126029736/3c6a7039-b1bd-4b44-b9f7-f646048a27d1">
+
+<img src="https://github.com/jeonghawook/quizFront/assets/126029736/208215ff-056e-4084-b1af-8a6c9f44acf9">
 
 
 ## **트러블슈팅** 
