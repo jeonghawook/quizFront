@@ -67,5 +67,5 @@
 <p> </p>
 </details>
 
-## **FE에서 화면 보기**
+## **BE 둘러보기**
  [BACKEND GIT으로 바로가기 ! ](https://github.com/jeonghawook/quiz)
