@@ -49,19 +49,24 @@
 <details>
 <summary>AXIOS ERROR</summary>
 <br>
-<img src="https://github.com/jeonghawook/quiz/assets/126029736/827d674d-f572-46fb-b69b-6cfc3d6cf578">
+<p>일주일 동안 고민하게 만든 https. 리액트 네이티브는 http가 아닌 https 로 통신한다. <br>
+ 로그에서 ReactNativeJS ▶︎ [AxiosError: Network Error] 딱 이 한줄로 에러가 뜬다.  <br>
+ 더 자세한 설명이 없었다. 혹시 cors에러가 아닐까,  <br>
+ 수 많은 에러를 찾는중 뜬금없이 전 프로젝트에서 geolocation은 https에서만 사용할수 있는게 떠올랐다.  <br>
+ 그래서 http로 통신할수 있는 "usesCleartextTraffic": true 사용해보고 실패. 마지막에 최후의 https 로 설정하고 통신했더니 성공했다. <br>
+ (*경험이 중요하긴하다)</p>
 </details>
 
 <details>
 <summary>ZUSTAND IN REACT NATIVE</summary>
-<br>
-<img src="https://github.com/jeonghawook/quiz/assets/126029736/827d674d-f572-46fb-b69b-6cfc3d6cf578">
+ <br>
+ <p>storage:createJSONStorage(()=> AsyncStorage) 웹과 설정 법이 달라서 많은 시간을 투자했던 부분이다. </p>
 </details>
 
 <details>
 <summary>REACT NATIVE 그 자체</summary>
 <br>
-<img src="https://github.com/jeonghawook/quiz/assets/126029736/827d674d-f572-46fb-b69b-6cfc3d6cf578">
+<p> </p>
 </details>
 
 ## **FE에서 화면 보기**
